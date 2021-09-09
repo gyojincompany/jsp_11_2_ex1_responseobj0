@@ -11,7 +11,7 @@
 	    String agestr, name; 
 	%>
 	
-	<% 
+	<%
 		agestr = request.getParameter("age");
 		age = Integer.parseInt(agestr);
 		name = request.getParameter("name");
