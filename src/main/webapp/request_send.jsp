@@ -19,15 +19,15 @@
 		name = request.getParameter("name");
 		age = Integer.parseInt(agestr);
 		
-		String name2 = URLEncoder.encode(name,"EUC-KR");
+		//String name2 = URLEncoder.encode(name,"EUC-KR");
 	
 		if(age>=20)
 		{			
-			response.sendRedirect("pass.jsp?age=" + age + "&name=" + name2);//가지고온 age값과 name값을 pass.jsp 에 전달
+			response.sendRedirect("pass.jsp?age=" + age + "&name=" + URLEncoder.encode(name,"EUC-KR"));//가지고온 age값과 name값을 pass.jsp 에 전달
 		}
 		else			
 		{		
-			response.sendRedirect("ng.jsp?age=" + age + "&name=" + name2);
+			response.sendRedirect("ng.jsp?age=" + age + "&name=" + URLEncoder.encode(name,"EUC-KR"));
 		}
 	%>
 </body>
